@@ -18,4 +18,6 @@ has_one_attached :profile_image
     profile_image.variant(resize_to_limit: [width, height]).processed
   end
 
+
+
 end

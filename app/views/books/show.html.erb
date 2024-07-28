@@ -28,7 +28,7 @@
       <table class="table">
         <tbody>
           <tr>
-            <td class="col-4"><%= link_to image_tag(@user.get_profile_image(100,100)),user_path(@user) %><br><%= @user.name %></td>
+            <td class="col-4"><%= link_to image_tag(@user.get_profile_image(100,100)),user_path(@user) %><br><%= link_to  @user.name,user_path(@user) %></td>
             <td class="col-2"><%= link_to @book.title, book_path(@book.id) %></td>
             <td class="col-2"><%= @book.body %></td>
             <td class="col-2"><% if @user == current_user %><%= link_to "Edit", edit_book_path(@book.id), class:"btn btn-sm btn-success" %></td>
